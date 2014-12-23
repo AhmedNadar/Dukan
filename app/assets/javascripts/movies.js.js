@@ -1,0 +1,1 @@
+(function(){$(window).load(function(){return $("a[data-target]").click(function(t){var a,r,n;return t.preventDefault(),a=$(this),"Add to"===a.data("target")?(n=a.data("addurl"),r="Remove from"):(n=a.data("removeurl"),r="Add to"),$.ajax({url:n,type:"put",success:function(t){return $(".cart-count").html(t),a.find("span").html(r),a.data("target",r)}})})})}).call(this);
